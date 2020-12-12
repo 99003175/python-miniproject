@@ -14,6 +14,8 @@ class rps:
         self.win = 0
         self.loss = 0
         self.tie = 0
+
+
 class new():
     def check_win(self):
         if self.UserMove == self.computerMove:
@@ -28,7 +30,9 @@ class new():
         elif self.UserMove == "s" and self.computerMove == 'p':
             self.win += 1
             print("You win!")
-class new2(new,rps):
+
+
+class new2(new, rps):
     def check_win2(self):
         if self.UserMove == "r" and self.computerMove == 'p':
             self.loss += 1
