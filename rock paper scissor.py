@@ -14,7 +14,7 @@ class rps:
         self.win = 0
         self.loss = 0
         self.tie = 0
-
+class new():
     def check_win(self):
         if self.UserMove == self.computerMove:
             print("It is tie:!")
@@ -28,7 +28,9 @@ class rps:
         elif self.UserMove == "s" and self.computerMove == 'p':
             self.win += 1
             print("You win!")
-        elif self.UserMove == "r" and self.computerMove == 'p':
+class new2(new,rps):
+    def check_win2(self):
+        if self.UserMove == "r" and self.computerMove == 'p':
             self.loss += 1
             print("You Lose!")
         elif self.UserMove == "p" and self.computerMove == 's':
@@ -64,11 +66,10 @@ while True:
     elif randomNumber == 3:
         computerMove = 's'
         print("Scissors")
-    winobject = rps(UserMove, computerMove)
+    winobject = new2(UserMove, computerMove)
     winobject.check_win()
+    winobject.check_win2()
     win = win + winobject.win
     loss = loss + winobject.loss
     tie = tie + winobject.tie
     print(f"Win: {win}\nLoss: {loss}\nTie: {tie}")
-
-
