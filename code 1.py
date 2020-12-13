@@ -1,4 +1,5 @@
-import random, sys
+import random
+import sys
 
 print("\n \t\t\t\t ****** Rock Paper Scissors *****")
 
@@ -11,32 +12,33 @@ tie = 0
 while True:
     print(f"Win: {win}\nLoss: {loss}\nTie: {tie}")
 
-    print("""Enter Your Move: 
-            r - rock 
-            p - paper 
-            s - scissors 
+    print("""Enter Your Move:
+            r - rock
+            p - paper
+            s - scissors
             q - quit""")
     UserMove = input("\n Type one of r, p, s or q : ")
     if UserMove == 'q':
-        sys.exit()   #Quit the program.
+        sys.exit()
+        # Quit the program.
 
-    # Display what the computer choice: 
+    # Display what the computer choice:
     randomNumber = random.randint(1, 3)
 
-    #Let Computer Choose it's move. 
+    # Let Computer Choose it's move.
     if randomNumber == 1:
         computerMove = 'r'
         print("Rock")
-    
+
     elif randomNumber == 2:
         computerMove = 'p'
         print("Paper")
-    
+
     elif randomNumber == 3:
         computerMove = 's'
         print("Scissors")
-        
-    #Check Win
+
+    # Check Win
     if UserMove == computerMove:
         print("It is tie:!")
         tie += 1
